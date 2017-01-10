@@ -1,0 +1,11 @@
+email: cadetho@gmail.com
+fullname: 'Cade Thomasson'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$0uFzjU9cFm9TVxz66s2XqeRi8nY6eLvX0TXHOjrBJB4ExS7hqov1y
