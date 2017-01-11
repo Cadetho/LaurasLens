@@ -2,14 +2,28 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/config/site.yaml',
-    'modified' => 1484082029,
+    'modified' => 1484158558,
     'data' => [
-        'title' => 'Free Landing Page HTML Template',
+        'title' => 'Laura\'s Lens',
         'author' => [
-            'name' => 'Peter Finla'
+            'name' => 'Laura Sims',
+            'email' => 'john@email.com'
+        ],
+        'taxonomies' => [
+            0 => 'category',
+            1 => 'tag'
         ],
         'metadata' => [
             'description' => 'Land.io is a carefully crafted landing page UI kit and landing page template built on Bootstrap 4, designed by Peter Finlan and developed by Taty Grassini.'
+        ],
+        'summary' => [
+            'enabled' => true,
+            'format' => 'short',
+            'size' => 300,
+            'delimiter' => '==='
+        ],
+        'blog' => [
+            'route' => '/blog'
         ],
         'logo' => [
             'icon' => 'logo',

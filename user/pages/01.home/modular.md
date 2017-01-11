@@ -1,3 +1,4 @@
+
 ---
 title: Landio
 menu: Home
@@ -64,6 +65,7 @@ content:
         dir: asc
         custom:
             - _intro
+            - _lightslider
             - _features
             - _video
             - _pricing
@@ -72,3 +74,5 @@ content:
             - _news
             - _contact
 ---
+
+```

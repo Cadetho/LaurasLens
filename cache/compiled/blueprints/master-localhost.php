@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1484084764,
-    'checksum' => '001e5af55f4d56c18beecaf2f833f1d8',
+    'timestamp' => 1484167756,
+    'checksum' => 'c5accefaad93e9c3d2ae2e1c2b8b659f',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -27,9 +27,17 @@ return [
                 'file' => 'user/plugins/admin/blueprints.yaml',
                 'modified' => 1484082029
             ],
+            'plugins/assets' => [
+                'file' => 'user/plugins/assets/blueprints.yaml',
+                'modified' => 1484095783
+            ],
+            'plugins/devtools' => [
+                'file' => 'user/plugins/devtools/blueprints.yaml',
+                'modified' => 1484096875
+            ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
-                'modified' => 1484082038
+                'modified' => 1484157951
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
@@ -38,6 +46,10 @@ return [
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
                 'modified' => 1484082045
+            ],
+            'plugins/lightslider' => [
+                'file' => 'user/plugins/lightslider/blueprints.yaml',
+                'modified' => 1484145018
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
@@ -2052,6 +2064,50 @@ return [
                 'name' => 'plugins.admin.popularity.history.visitors',
                 'validation' => 'loose'
             ],
+            'plugins.assets' => [
+                'form' => [
+                    'validation' => 'strict'
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.assets.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.assets.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.devtools' => [
+                'form' => [
+                    'validation' => 'strict'
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.devtools.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.devtools.enabled',
+                'validation' => 'strict'
+            ],
             'plugins.email' => [
                 'form' => [
                     'validation' => 'loose'
@@ -2353,6 +2409,279 @@ return [
                 'label' => 'PLUGIN_FORM.RECAPTCHA_SECRET_KEY',
                 'default' => '',
                 'name' => 'plugins.form.recaptcha.secret_key',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider' => [
+                'form' => [
+                    'validation' => 'strict'
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.lightslider.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.lightslider.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'Use built in CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.lightslider.built_in_css',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.slider_type' => [
+                'type' => 'toggle',
+                'label' => 'Slider Type',
+                'highlight' => 1,
+                'default' => 'text',
+                'options' => [
+                    'text' => 'Text',
+                    'image' => 'Image'
+                ],
+                'name' => 'plugins.lightslider.slider_type',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.type_text_height' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Type Text Height',
+                'default' => 'auto',
+                'name' => 'plugins.lightslider.type_text_height',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.type_text_vertical_padding' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Type Text Vertical Padding',
+                'default' => '80px',
+                'name' => 'plugins.lightslider.type_text_vertical_padding',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.type_text_horizontal_padding' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Type Text Horizontal Padding',
+                'default' => '50px',
+                'name' => 'plugins.lightslider.type_text_horizontal_padding',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.type_text_brightness' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Type Text Brightness',
+                'default' => 0,
+                'name' => 'plugins.lightslider.type_text_brightness',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.item' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Item',
+                'default' => 1,
+                'name' => 'plugins.lightslider.item',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.slideMove' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Slide Move',
+                'default' => 1,
+                'name' => 'plugins.lightslider.slideMove',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.slideMargin' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Slide Margin',
+                'default' => 0,
+                'name' => 'plugins.lightslider.slideMargin',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.loop' => [
+                'type' => 'toggle',
+                'label' => 'Loop',
+                'highlight' => true,
+                'default' => 'false',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.loop',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.mode' => [
+                'type' => 'toggle',
+                'label' => 'Loop',
+                'highlight' => 'fade',
+                'default' => 'fade',
+                'options' => [
+                    'fade' => 'Fade',
+                    'slide' => 'Slide'
+                ],
+                'name' => 'plugins.lightslider.mode',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.controls' => [
+                'type' => 'toggle',
+                'label' => 'Controls',
+                'highlight' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.controls',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.keyPress' => [
+                'type' => 'toggle',
+                'label' => 'Key Press',
+                'highlight' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.keyPress',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.auto' => [
+                'type' => 'toggle',
+                'label' => 'Auto',
+                'highlight' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.auto',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.pause' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Pause',
+                'default' => 2000,
+                'name' => 'plugins.lightslider.pause',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.pauseOnHover' => [
+                'type' => 'toggle',
+                'label' => 'Pause on Hover',
+                'highlight' => true,
+                'default' => 'false',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.pauseOnHover',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.speed' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Speed',
+                'default' => 1000,
+                'name' => 'plugins.lightslider.speed',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.pager' => [
+                'type' => 'toggle',
+                'label' => 'Pager',
+                'highlight' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.pager',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.gallery' => [
+                'type' => 'toggle',
+                'label' => 'Gallery',
+                'highlight' => true,
+                'default' => 'false',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.gallery',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.gallery_thumb_width' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Gallery Thumb Width',
+                'default' => 100,
+                'name' => 'plugins.lightslider.gallery_thumb_width',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.gallery_thumb_height' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Gallery Thumb Height',
+                'default' => 100,
+                'name' => 'plugins.lightslider.gallery_thumb_height',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.gallery_margin' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Gallery Margin',
+                'default' => 15,
+                'name' => 'plugins.lightslider.gallery_margin',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.gallery_thumb_margin' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'Gallery Thumb Margin',
+                'default' => 5,
+                'name' => 'plugins.lightslider.gallery_thumb_margin',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.enableTouch' => [
+                'type' => 'toggle',
+                'label' => 'Enable Touch',
+                'highlight' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.enableTouch',
+                'validation' => 'strict'
+            ],
+            'plugins.lightslider.enableDrag' => [
+                'type' => 'toggle',
+                'label' => 'Enable Drag',
+                'highlight' => true,
+                'default' => 'true',
+                'options' => [
+                    'true' => 'Enabled',
+                    'false' => 'Disabled'
+                ],
+                'name' => 'plugins.lightslider.enableDrag',
                 'validation' => 'strict'
             ],
             'plugins.login' => [
@@ -3077,6 +3406,12 @@ return [
                         'days_of_stats' => 'plugins.admin.dashboard.days_of_stats'
                     ]
                 ],
+                'assets' => [
+                    'enabled' => 'plugins.assets.enabled'
+                ],
+                'devtools' => [
+                    'enabled' => 'plugins.devtools.enabled'
+                ],
                 'email' => [
                     'enabled' => 'plugins.email.enabled',
                     'mailer' => [
@@ -3118,6 +3453,34 @@ return [
                         'site_key' => 'plugins.form.recaptcha.site_key',
                         'secret_key' => 'plugins.form.recaptcha.secret_key'
                     ]
+                ],
+                'lightslider' => [
+                    'enabled' => 'plugins.lightslider.enabled',
+                    'built_in_css' => 'plugins.lightslider.built_in_css',
+                    'slider_type' => 'plugins.lightslider.slider_type',
+                    'type_text_height' => 'plugins.lightslider.type_text_height',
+                    'type_text_vertical_padding' => 'plugins.lightslider.type_text_vertical_padding',
+                    'type_text_horizontal_padding' => 'plugins.lightslider.type_text_horizontal_padding',
+                    'type_text_brightness' => 'plugins.lightslider.type_text_brightness',
+                    'item' => 'plugins.lightslider.item',
+                    'slideMove' => 'plugins.lightslider.slideMove',
+                    'slideMargin' => 'plugins.lightslider.slideMargin',
+                    'loop' => 'plugins.lightslider.loop',
+                    'mode' => 'plugins.lightslider.mode',
+                    'controls' => 'plugins.lightslider.controls',
+                    'keyPress' => 'plugins.lightslider.keyPress',
+                    'auto' => 'plugins.lightslider.auto',
+                    'pause' => 'plugins.lightslider.pause',
+                    'pauseOnHover' => 'plugins.lightslider.pauseOnHover',
+                    'speed' => 'plugins.lightslider.speed',
+                    'pager' => 'plugins.lightslider.pager',
+                    'gallery' => 'plugins.lightslider.gallery',
+                    'gallery_thumb_width' => 'plugins.lightslider.gallery_thumb_width',
+                    'gallery_thumb_height' => 'plugins.lightslider.gallery_thumb_height',
+                    'gallery_margin' => 'plugins.lightslider.gallery_margin',
+                    'gallery_thumb_margin' => 'plugins.lightslider.gallery_thumb_margin',
+                    'enableTouch' => 'plugins.lightslider.enableTouch',
+                    'enableDrag' => 'plugins.lightslider.enableDrag'
                 ],
                 'login' => [
                     'tabs' => 'plugins.login.tabs',
