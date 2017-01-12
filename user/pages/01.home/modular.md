@@ -64,10 +64,9 @@ content:
         by: default
         dir: asc
         custom:
-            - _intro
             - _lightslider
+            - _intro
             - _features
-            - _video
             - _pricing
             - _testimonials
             - _text

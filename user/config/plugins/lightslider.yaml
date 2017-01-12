@@ -15,7 +15,7 @@ keyPress: 'true'
 auto: 'false'
 pause: 2000
 speed: 1000
-pager: 'true'
+pager: 'false'
 gallery: 'false'
 gallery_thumb_width: 100
 gallery_thumb_height: 100
@@ -24,3 +24,5 @@ gallery_thumb_margin: 5
 enableTouch: 'true'
 enableDrag: 'true'
 pauseOnHover: 'false'
+freeMove: 'true'
+unique_id: 'lightsliderCallback'

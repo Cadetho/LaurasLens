@@ -4201,7 +4201,7 @@ a.bg-danger:hover {
   color: #fff; }
 
 .bg-inverse-custom {
-  margin-top: 1.1875rem;
+  margin-top: 0;
   background-color: transparent; }
 
 .bg-white {
@@ -5334,3 +5334,7 @@ figure {
 	font-size: 0.7rem;
 }
 
+div#content{
+	
+	margin-top: -1rem;
+}

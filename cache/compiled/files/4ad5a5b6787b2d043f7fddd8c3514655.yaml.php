@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/config/plugins/lightslider.yaml',
-    'modified' => 1484158440,
+    'modified' => 1484258134,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,
@@ -21,7 +21,7 @@ return [
         'auto' => 'false',
         'pause' => 2000,
         'speed' => 1000,
-        'pager' => 'true',
+        'pager' => 'false',
         'gallery' => 'false',
         'gallery_thumb_width' => 100,
         'gallery_thumb_height' => 100,
@@ -29,6 +29,8 @@ return [
         'gallery_thumb_margin' => 5,
         'enableTouch' => 'true',
         'enableDrag' => 'true',
-        'pauseOnHover' => 'false'
+        'pauseOnHover' => 'false',
+        'freeMove' => 'true',
+        'unique_id' => 'lightsliderCallback'
     ]
 ];
