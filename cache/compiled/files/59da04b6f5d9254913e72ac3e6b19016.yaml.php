@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/system/config/system.yaml',
-    'modified' => 1484082010,
+    'modified' => 1484324601,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',
@@ -115,7 +115,10 @@ return [
             'autoescape' => false,
             'undefined_functions' => true,
             'undefined_filters' => true,
-            'umask_fix' => false
+            'umask_fix' => false,
+            'globals' => [
+                'root_path' => '%kernel.root_dir%'
+            ]
         ],
         'assets' => [
             'css_pipeline' => false,

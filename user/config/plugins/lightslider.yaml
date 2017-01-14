@@ -25,4 +25,4 @@ enableTouch: 'true'
 enableDrag: 'true'
 pauseOnHover: 'false'
 freeMove: 'true'
-unique_id: 'lightsliderCallback'
+unique_id: "lightSliderHeadID"

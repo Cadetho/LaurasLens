@@ -5338,3 +5338,26 @@ div#content{
 	
 	margin-top: -1rem;
 }
+
+.slider-text{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 5rem;
+	opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+h1.slider-text{
+	top: 40vh;
+}
+
+h2.slider-text{
+	top: 50vh;
+}
+
+.slider-text-show{
+		opacity: 1;
+}

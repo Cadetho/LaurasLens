@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1484258197,
-    'checksum' => '386d4f53667ea38f7a799a6a564b7e8a',
+    'timestamp' => 1484324873,
+    'checksum' => '5388fac507ed5c6e4237c554c67bfe83',
     'files' => [
         'user/config' => [
             'media' => [
@@ -15,7 +15,7 @@ return [
             ],
             'plugins/lightslider' => [
                 'file' => 'user/config/plugins/lightslider.yaml',
-                'modified' => 1484258134
+                'modified' => 1484321932
             ],
             'plugins/login' => [
                 'file' => 'user/config/plugins/login.yaml',
@@ -53,7 +53,7 @@ return [
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1484082010
+                'modified' => 1484324601
             ]
         ],
         'user/plugins' => [
@@ -229,7 +229,7 @@ return [
                 'enableDrag' => 'true',
                 'pauseOnHover' => 'false',
                 'freeMove' => 'true',
-                'unique_id' => 'lightsliderCallback'
+                'unique_id' => 'lightSliderHeadID'
             ],
             'login' => [
                 'enabled' => true,
@@ -756,7 +756,10 @@ return [
                 'autoescape' => false,
                 'undefined_functions' => true,
                 'undefined_filters' => true,
-                'umask_fix' => false
+                'umask_fix' => false,
+                'globals' => [
+                    'root_path' => '%kernel.root_dir%'
+                ]
             ],
             'assets' => [
                 'css_pipeline' => false,

@@ -17,7 +17,7 @@ class __TwigTemplate_b2a9dee72708588788bb4cff06bf014d0069d7034a766b158bbff1cb45d
     {
         // line 1
         echo "<head>
-<script src=\"https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js\"></script>
+
 ";
         // line 3
         $this->getAttribute(($context["assets"] ?? null), "addJS", array(0 => "theme://js/lauraslens.js"), "method");
@@ -28,7 +28,10 @@ class __TwigTemplate_b2a9dee72708588788bb4cff06bf014d0069d7034a766b158bbff1cb45d
         echo $this->getAttribute(($context["assets"] ?? null), "js", array(), "method");
         echo "
 
-</head>";
+</head>
+
+
+";
     }
 
     public function getTemplateName()
@@ -57,11 +60,14 @@ class __TwigTemplate_b2a9dee72708588788bb4cff06bf014d0069d7034a766b158bbff1cb45d
     public function getSourceContext()
     {
         return new Twig_Source("<head>
-<script src=\"https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.js\"></script>
+
 {% do assets.addJS('theme://js/lauraslens.js') %}
 
 {{ assets.js() }}
 
-</head>", "partials/header.html.twig", "C:\\xampp\\htdocs\\LaurasLens\\user\\themes\\lauraslens\\templates\\partials\\header.html.twig");
+</head>
+
+
+", "partials/header.html.twig", "C:\\xampp\\htdocs\\LaurasLens\\user\\themes\\lauraslens\\templates\\partials\\header.html.twig");
     }
 }
