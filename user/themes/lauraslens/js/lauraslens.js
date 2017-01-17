@@ -6,8 +6,20 @@ String.prototype.filename=function(extension){
     return extension? s.replace(/[?#].+$/, ''): s.split('.')[0];
 }
 
-
+$(document).scroll(function() {
+	console.log("scrolled");
+	var scrollPos = $(window).scrollTop(),
+	temp_navbar = $('.navbar-fixed-top'),
+	temp_icon = $('span.icon-logo');
+	
+	if(scrollPos>10) {
+		temp_navbar.addClass('nav-scroll-change-color');
+	} else {
+		temp_navbar.removeClass('nav-scroll-change-color');
+	}
+});
 $(document).ready(function() {
+
 $("#lightSliderHeadID").lightSlider({
 	item: 1,
 	slideMove: 1,
@@ -22,7 +34,7 @@ $("#lightSliderHeadID").lightSlider({
 	pauseOnHover: false,
 	controls: true,
 	keyPress: true,
-	adaptiveHeight: true,
+	adaptiveHeight: false,
 	vertical: false,
 	verticalHeight: 500,
 	pager: false,
@@ -36,8 +48,7 @@ $("#lightSliderHeadID").lightSlider({
 		var x = 0;
 		var result = new Array();
 		result = getslidetext(slidecount, result);
-		
-		
+
 
 		// $("#lightSliderHeadID li:nth-child(" + x + ")").append("<h1 class='slider-text'>" + output[0] + "</h1><h2 class='slider-text'>" + output[1] + "</h2>");
 	},
