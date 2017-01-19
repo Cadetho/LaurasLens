@@ -5361,3 +5361,26 @@ h2.slider-text{
 		opacity: 1;
 }
 
+.about-wrapper{
+	height: 100vh;
+}
+
+.aboutimg{
+	height: 40%;
+	width: auto;
+	display: inline-block;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+	float: right;
+	margin-right: 5%;
+}
+.aboutimg > p {
+	height: 100%;
+	width: auto;
+}
+
+.aboutimg > p > img {
+	height: 100%;
+}

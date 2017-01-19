@@ -53,13 +53,16 @@ $("#lightSliderHeadID").lightSlider({
 		// $("#lightSliderHeadID li:nth-child(" + x + ")").append("<h1 class='slider-text'>" + output[0] + "</h1><h2 class='slider-text'>" + output[1] + "</h2>");
 	},
 	onAfterSlide: function (el) { 
+	if(!($('li.lslide.active > h1').hasClass('slider-text-show'))){
 		$('li.lslide.active > h1').toggleClass('slider-text-show');
 		$('li.lslide.active > h2').toggleClass('slider-text-show');
-		
+	}
 	},
 	onBeforeSlide: function(el) {
+	if(($('li.lslide.active > h1').hasClass('slider-text-show'))){
 		$('li.lslide.active > h1').toggleClass('slider-text-show');
 		$('li.lslide.active > h2').toggleClass('slider-text-show');
+	}
 	}
 
 });

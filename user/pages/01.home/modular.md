@@ -65,6 +65,7 @@ content:
         dir: asc
         custom:
             - _lightslider
+            - _aboutme
             - _intro
             - _features
             - _pricing

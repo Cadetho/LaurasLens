@@ -38,7 +38,7 @@ class LightsliderPlugin extends Plugin
      */
     public function onTwigTemplatePaths()
     {
-        $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
+        $this->grav['twig']->twig_paths[] ='C:/xampp/htdocs/LaurasLens/user/plugins/lightslider/templates';
     }
 
     /**
