@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1484689260,
-    'checksum' => '92779efc7cba642bbaaa2de0bd384f9f',
+    'timestamp' => 1484776081,
+    'checksum' => '581fbb48255ed31e5faca0f0fa5714d0',
     'files' => [
         'user/config' => [
             'media' => [
@@ -80,6 +80,10 @@ return [
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
                 'modified' => 1484082045
+            ],
+            'plugins/gallery' => [
+                'file' => 'user/plugins/gallery/gallery.yaml',
+                'modified' => 1484775185
             ],
             'plugins/lightslider' => [
                 'file' => 'user/plugins/lightslider/lightslider.yaml',
@@ -200,6 +204,9 @@ return [
                         0 => 'image/*'
                     ]
                 ]
+            ],
+            'gallery' => [
+                'enabled' => true
             ],
             'lightslider' => [
                 'enabled' => true,

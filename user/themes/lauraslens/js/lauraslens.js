@@ -19,7 +19,15 @@ $(document).scroll(function() {
 	}
 });
 $(document).ready(function() {
-
+	$('#lightSliderHeadID-wrapper').addClass('scroll-section');
+	$('div.about-wrapper').addClass('scroll-section');
+	$('section.section-intro').addClass('scroll-section');
+/* $(function() {
+	$.scrollify({
+			section: '.scroll-section',
+			easing: 'linear'
+	});
+}); */
 $("#lightSliderHeadID").lightSlider({
 	item: 1,
 	slideMove: 1,
@@ -84,8 +92,12 @@ function getslidetext(slidecount, result){
 		result.reverse();
 		console.log(result);
 		for(i=1;i<result.length+1;i++){
-			console.log(i);
 				$("#lightSliderHeadID li:nth-child(" + i + ")").append("<h1 class='slider-text'>" + result[i-1][0] + "</h1><h2 class='slider-text'>" + result[i-1][1] + "</h2>");
+				var width = $("#lightSliderHeadID li:nth-child(" + i + ") > h1").width();
+				$("#lightSliderHeadID li:nth-child(" + i + ") > h2").css("width", width*1.2);
+				$("#lightSliderHeadID li:nth-child(" + i + ") > h1").css("width",  width*1.2);
+				$("#lightSliderHeadID li:nth-child(" + i + ") > h1").css("border-top",  "2px solid white");
+				$("#lightSliderHeadID li:nth-child(" + i + ") > h2").css("border-bottom", "2px solid white");
 		}
 		$('#lightSliderHeadID li:nth-child(1) > h1').toggleClass('slider-text-show');
 		$('#lightSliderHeadID li:nth-child(1) > h2').toggleClass('slider-text-show');

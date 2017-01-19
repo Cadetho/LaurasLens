@@ -30,10 +30,12 @@
         {% block stylesheets %}
             {% do assets.addCss('theme://css/animate.min.css') %}
             {% do assets.addCss('theme://css/landio.css') %}
+			{% do assets.addCss('https://fonts.googleapis.com/css?family=Merriweather') %}
         {% endblock %}
         {{ assets.css() }}
 
         {% block javascripts %}
+			{% do assets.addJs('theme://js/jquery.scrollify.min.js') %}
             {% do assets.add('jquery',101) %}
         {% endblock %}
         {{ assets.js() }}

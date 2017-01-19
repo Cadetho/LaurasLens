@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1484689260,
-    'checksum' => 'c5accefaad93e9c3d2ae2e1c2b8b659f',
+    'timestamp' => 1484776081,
+    'checksum' => 'a9bf26aed57b6b0561438967e8e5a8c0',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -46,6 +46,10 @@ return [
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
                 'modified' => 1484082045
+            ],
+            'plugins/gallery' => [
+                'file' => 'user/plugins/gallery/blueprints.yaml',
+                'modified' => 1484775185
             ],
             'plugins/lightslider' => [
                 'file' => 'user/plugins/lightslider/blueprints.yaml',
@@ -2411,6 +2415,28 @@ return [
                 'name' => 'plugins.form.recaptcha.secret_key',
                 'validation' => 'strict'
             ],
+            'plugins.gallery' => [
+                'form' => [
+                    'validation' => 'strict'
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.gallery.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.gallery.enabled',
+                'validation' => 'strict'
+            ],
             'plugins.lightslider' => [
                 'form' => [
                     'validation' => 'strict'
@@ -3453,6 +3479,9 @@ return [
                         'site_key' => 'plugins.form.recaptcha.site_key',
                         'secret_key' => 'plugins.form.recaptcha.secret_key'
                     ]
+                ],
+                'gallery' => [
+                    'enabled' => 'plugins.gallery.enabled'
                 ],
                 'lightslider' => [
                     'enabled' => 'plugins.lightslider.enabled',

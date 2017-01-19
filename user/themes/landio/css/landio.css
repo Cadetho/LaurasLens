@@ -5340,21 +5340,28 @@ div#content{
 
 .slider-text{
 	position: absolute;
-	width: 100%;
+
 	text-align: center;
-	font-size: 5rem;
 	opacity: 0;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
+	font-family: 'Merriweather', serif;
+	display: inline-block;
 }
 
 h1.slider-text{
-	top: 40vh;
+	font-size: 500%;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 h2.slider-text{
-	top: 50vh;
+	font-size: 300%;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .slider-text-show{
@@ -5363,24 +5370,49 @@ h2.slider-text{
 
 .about-wrapper{
 	height: 100vh;
+	position: relative;
+	font-family: 'Merriweather', serif;
+	background: #f4f5f7;
 }
 
 .aboutimg{
-	height: 40%;
+	height: 60%;
 	width: auto;
 	display: inline-block;
-  top: 50%;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-	float: right;
+	position: absolute;
+	bottom: 0;
+	float: left;
 	margin-right: 5%;
 }
-.aboutimg > p {
+
+
+.aboutimg > img {
 	height: 100%;
+}
+ul#lightSliderHeadID > li > img{
+	height: 100vh;
+}
+div#about-text-wrap{
+	height: auto;
 	width: auto;
+	width: 40%;
+	float: right;
+	margin-right: 15%;
+}
+div#about-text-wrap > h1{
+	font-size: 400%;
+	display: inline-block;
+	margin-top: 20%;
+	margin-bottom: 3%;
+	margin-left: 1%;
+	width: 100%;
 }
 
-.aboutimg > p > img {
-	height: 100%;
+div#about-text-wrap > p {
+	float: right;
+	display: inline-block;
+	clear: both;
+	font-size: 125%;
+	margin-top: 5%;
+	margin-right: 10%;
 }
