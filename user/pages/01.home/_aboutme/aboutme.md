@@ -4,7 +4,8 @@ visible: false
 hidemenu: true
 ---
 
-<div id="about-img" class="aboutimg"><img src="user/pages/01.home/_aboutme/face.png"></div>
+
+<div id="about-right-wrap">
 <div id="about-text-wrap">
 <h1>About Me</h1>
 

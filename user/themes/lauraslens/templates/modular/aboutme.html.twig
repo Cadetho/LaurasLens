@@ -1,9 +1,16 @@
 <div class="about-wrapper">
-
+	<div id="about_picture_wrap">
+		<div id="about_pic1"><img src="{{ page.media['about1.jpg'].url }}"><div id="cover1" class="about_cover"></div></div>
+		<div id="about_pic2"><img src="{{ page.media['about2.jpg'].url }}"><div id="cover2" class="about_cover"></div></div>
+		<div id="about_pic3"><img src="{{ page.media['about3.jpeg'].url }}"><div id="cover3" class="about_cover"></div></div>
+	</div>
 	
 	 {{ page.content }}
 	
 	<div id="button-wrapper">
-		<a href="https://twitter.com/TwitterDev" class="twitter-follow-button" data-show-count="false">Follow @TwitterDev</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<div id="button-inner-wrap">
+			<div id="fb_button"></div>
+			<div id="twitter_button"></div>
+		</div>
 	</div>
 </div>
