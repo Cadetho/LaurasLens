@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/plugins/email/languages.yaml',
-    'modified' => 1484157951,
+    'modified' => 1484765332,
     'data' => [
         'en' => [
             'PLUGIN_EMAIL' => [

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/system/blueprints/config/system.yaml',
-    'modified' => 1484082010,
+    'modified' => 1484765327,
     'data' => [
         'title' => 'PLUGIN_ADMIN.SYSTEM',
         'form' => [

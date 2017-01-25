@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'themes://lauraslens/lauraslens.yaml',
-    'modified' => 1484167711,
+    'modified' => 1484765336,
     'data' => [
         'streams' => [
             'schemes' => [

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/plugins/admin/blueprints.yaml',
-    'modified' => 1484082029,
+    'modified' => 1484765327,
     'data' => [
         'name' => 'Admin Panel',
         'version' => '1.2.7',

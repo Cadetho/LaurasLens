@@ -227,3 +227,28 @@ div#about_picture_wrap > div:hover > img{
   transition: all 0.3s;
 	background-color: rgba(0,0,0,0.35);
 }
+#galleryinner{
+	margin: 0 auto;
+	width: 60%;
+	display: table;
+}
+div.gallery_wrap{
+	overflow: auto;
+}
+.gallery_unordered > li{
+	width: 40%;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	display: inline-block;
+}
+.gallery_unordered > li:nth-child(even) {
+	float: left;
+}
+.gallery_unordered > li:nth-child(odd){
+	float: right;
+	margin-left: 20px;
+}
+.gallery_unordered{
+	width: 100%;
+	overflow: auto;
+}

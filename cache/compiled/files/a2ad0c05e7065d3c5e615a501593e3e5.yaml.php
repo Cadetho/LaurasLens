@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/config/site.yaml',
-    'modified' => 1484158558,
+    'modified' => 1484765327,
     'data' => [
         'title' => 'Laura\'s Lens',
         'author' => [

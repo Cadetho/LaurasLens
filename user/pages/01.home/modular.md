@@ -65,13 +65,8 @@ content:
         dir: asc
         custom:
             - _lightslider
+            - _gallerymod
             - _aboutme
-            - _intro
-            - _features
-            - _pricing
-            - _testimonials
-            - _text
-            - _news
             - _contact
 ---
 

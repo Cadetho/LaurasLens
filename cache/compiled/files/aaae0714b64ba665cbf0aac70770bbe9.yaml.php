@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/plugins/devtools/blueprints.yaml',
-    'modified' => 1484096875,
+    'modified' => 1484765331,
     'data' => [
         'name' => 'DevTools',
         'version' => '1.0.4',

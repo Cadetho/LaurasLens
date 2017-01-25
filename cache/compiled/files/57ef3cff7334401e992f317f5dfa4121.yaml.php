@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/user/plugins/lightslider/blueprints.yaml',
-    'modified' => 1484145018,
+    'modified' => 1484765336,
     'data' => [
         'name' => 'LightSlider',
         'version' => '1.5.1',

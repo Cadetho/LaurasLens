@@ -1,0 +1,9 @@
+<div class="gallery_wrap">
+	<div id="galleryinner">
+	<ul class="gallery_unordered">
+	{% for p in page.find('/gallery').children if p != page %}
+	<li><img src='../LaurasLens/gallery/{{p.title}}/{{p.header.mainpic}}'></li>
+	{% endfor %}
+	</ul>
+	</div>
+</div>

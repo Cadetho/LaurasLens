@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp/htdocs/LaurasLens/system/languages/ro.yaml',
-    'modified' => 1484082010,
+    'modified' => 1484765327,
     'data' => [
         'FRONTMATTER_ERROR_PAGE' => '---
 Titlu: %1$s
