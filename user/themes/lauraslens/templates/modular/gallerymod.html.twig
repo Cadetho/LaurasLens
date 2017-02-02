@@ -2,7 +2,7 @@
 	<div id="galleryinner">
 	<ul class="gallery_unordered">
 	{% for p in page.find('/gallery').children if p != page %}
-	<li><img src='../LaurasLens/gallery/{{p.title}}/{{p.header.mainpic}}'></li>
+	<li><img style="margin-top:{{p.header.topshift}}; margin-right: {{p.header.rightshift}};" src='../LaurasLens/gallery/{{p.title}}/{{p.header.mainpic}}'></li>
 	{% endfor %}
 	</ul>
 	</div>

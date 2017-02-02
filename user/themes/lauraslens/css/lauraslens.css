@@ -237,9 +237,11 @@ div.gallery_wrap{
 }
 .gallery_unordered > li{
 	width: 40%;
+	height: 30vh;
 	margin-bottom: 20px;
 	margin-right: 20px;
 	display: inline-block;
+	overflow: hidden;
 }
 .gallery_unordered > li:nth-child(even) {
 	float: left;
@@ -252,3 +254,8 @@ div.gallery_wrap{
 	width: 100%;
 	overflow: auto;
 }
+
+.gallery_unordered > li > img{
+	width: 100%;
+}
+
