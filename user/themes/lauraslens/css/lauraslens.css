@@ -202,33 +202,37 @@ div#about_picture_wrap > div:hover > img{
   filter: none;
 }
 
-#cover1{
-	height: 30vh;
-	width: 30vh;
-}
-#cover2{
-	height: 40vh;
-	width: 40vh;
-	z-index: 30;
-}
-#cover3{
-	height: 30vh;
-	width: 30vh;
-}
-.about_cover:hover{
-	background-color: rgba(0,0,0,0);
-}
-.about_cover{
+.aboutpic{
 	height: 100%;
 	width: 100%;
 	top: 0;
-	z-index: 30;
+	z-index: 10;
 	position: absolute;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 	background-color: rgba(0,0,0,0.35);
 }
+.aboutpic:after{
+	content: '';
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	background: grey;
+	  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+	opacity: 0;
+}
+
+.aboutpic:hover:after{
+	opacity: 0.35;
+}
+
 
 #gallery_inner{
 	margin: 0 auto;
@@ -236,8 +240,10 @@ div#about_picture_wrap > div:hover > img{
 	display: table;
 }
 div.gallery_wrap{
-	overflow: auto;
-	margin-top: 15vh;
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
 }
 .gallery_item{
 	width: 45%;

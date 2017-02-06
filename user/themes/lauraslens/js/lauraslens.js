@@ -1,5 +1,4 @@
 
-
 String.prototype.filename=function(extension){
     var s= this.replace(/\\/g, '/');
     s= s.substring(s.lastIndexOf('/')+ 1);
@@ -19,6 +18,69 @@ $(document).scroll(function() {
 	}
 });
 $(document).ready(function() {
+	$(window).on("load", function(){
+	var gridwidth = $('.grid').width();
+	var imgarray = [
+		[0,0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0,0]
+	];
+	var imglinks = [];
+	$('.grid > div').each(function(){
+		img = $(this).children()[0];
+		imgwidth = $(img).width();
+		imgheight = $(img).height();
+		widthflag = 0;
+		heightflag = 0;
+		if(imgwidth < gridwidth*0.1){
+			widthflag = 1;
+			imgwidth = gridwidth*0.1;
+			$(this).width(gridwidth*0.1);
+			$(img).width(gridwidth*0.1);
+		}else if(imgwidth < gridwidth*0.2){
+			widthflag = 2;
+			imgwidth = gridwidth*0.2;
+			$(this).width(gridwidth*0.2);
+			$(img).width(gridwidth*0.2);
+		}else if(imgwidth < gridwidth*0.3){
+			widthflag = 3;
+			imgwidth = gridwidth*0.3;
+			$(this).width(gridwidth*0.3);
+			$(img).width(gridwidth*0.3);
+		}else if(imgwidth < gridwidth*0.4){
+			widthflag = 4;
+			imgwidth = gridwidth*0.4;
+			$(this).width(gridwidth*0.4);
+			$(img).width(gridwidth*0.4);
+		}else if(imgwidth < gridwidth*0.5){
+			widthflag = 5;
+			imgwidth = gridwidth*0.5;
+			$(this).width(gridwidth*0.5);
+			$(img).width(gridwidth*0.5);
+		}
+		
+		if(imgheight<gridwidth*0.1){
+			heightflag = 1;
+			$(this).height(gridwidth*0.1);
+		} else if(imgheight<gridwidth*0.2){
+			heightflag = 2;
+			$(this).height(gridwidth*0.2);
+		} else if(imgheight<gridwidth*0.3){
+			heightflag = 3;
+			$(this).height(gridwidth*0.3);
+		} else if(imgheight<gridwidth*0.4){
+			heightflag = 4;
+			$(this).height(gridwidth*0.4);
+		} else if(imgheight<gridwidth*0.5){
+			heightflag = 5;
+			$(this).height(gridwidth*0.5);
+		}
+		
+		imglinks.push({img: this, w: widthflag, h: heightflag});	
+	});
+	console.log(imglinks);
+	});
 	$('iframe#twitter-widget-0').ready(function(){
 		facebook = $('div.fb-follow');
 		facebook.height('28px');
