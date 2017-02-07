@@ -243,7 +243,6 @@ div.gallery_wrap{
 	display: inline-block;
 	overflow: hidden;
 	width: 100%;
-	height: 100vh;
 }
 .gallery_item{
 	width: 45%;
@@ -297,4 +296,12 @@ div.gallery_wrap{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   filter: blur(2px);
+}
+.grid{
+	position: relative;
+}
+.grid > div{
+	position: absolute;
+
+	overflow: hidden;
 }
