@@ -234,16 +234,12 @@ div#about_picture_wrap > div:hover > img{
 }
 
 
-#gallery_inner{
-	margin: 0 auto;
-	width: 75%;
-	display: table;
-}
 div.gallery_wrap{
-	display: inline-block;
-	overflow: hidden;
+	height: 100vh;
 	width: 100%;
+	position: relative;
 }
+
 .gallery_item{
 	width: 45%;
 	height: 20vw;
@@ -272,16 +268,6 @@ div.gallery_wrap{
 .gallery_item:hover:after{
 	opacity: 0.35;
 }
-.gallery_inner > div:nth-child(even) {
-	float: right;
-}
-.gallery_inner > div:nth-child(odd){
-	float: left;
-}
-.gallery_inner {
-	width: 100%;
-	overflow: auto;
-}
 
 .gallery_item > img{
 	width: 100%;
@@ -297,11 +283,41 @@ div.gallery_wrap{
   transform: scale(1.1);
   filter: blur(2px);
 }
-.grid{
-	position: relative;
-}
-.grid > div{
+.slider-wrap{
 	position: absolute;
-
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding-left: 8%;
+	white-space: nowrap;
 	overflow: hidden;
+}
+
+
+div.gallery-tile{
+	width: 20vw;
+	overflow: hidden;
+	height: 100%;
+
+}
+.category-image{
+	height: 75%;
+}
+.category-image > img{
+	height: 100%;
+	width: auto;
+}
+.slider{
+	height: 100%;
+}
+.slick-list{
+	height: 100%;
+}
+.slick-track{
+	height: 100%;
+}
+.gallery-tile{
+	height: 100%;
 }

@@ -1,9 +1,12 @@
 <head>
-{% do assets.addJS('theme://js/masonry.pkgd.min.js') %}
-{% do assets.addJS('theme://js/mason.js') %}
-{% do assets.addJS('theme://js/imagesloaded.pkgd.min.js') %}
+{% do assets.addJS('theme://js/jquery-ui.min.js') %}
+{% do assets.addJS('theme://js/slick.min.js') %}
 {% do assets.addJS('theme://js/lauraslens.js') %}
+{% do assets.addJS('theme://js/jquery.scrollify.min') %}
 {% do assets.addCss('theme://css/lauraslens.css') %}
+{% do assets.addCss('theme://css/jquery-ui.min.css') %}
+{% do assets.addCss('theme://css/slick-theme.css') %}
+{% do assets.addCss('theme://css/slick.css') %}
 
 {{ assets.js() }}
 {{ assets.css() }}

@@ -1,8 +1,11 @@
 <div class="gallery_wrap">
 	<div id="gallery_inner" class="gallery_inner">
-	{% for p in page.find('/gallery').children if p != page %}
-	<div class="gallery_item"><img style="margin-top:{{p.header.topshift}}; margin-right: {{p.header.rightshift}};" src='../LaurasLens/gallery/{{p.title}}/{{p.header.mainpic}}'></div>
-	{% endfor %}
+	<ul>
+		{% for p in page.find('/gallery').children if p != page %}
+			<li>
+				<div class="gallery_item"><img style="margin-top:{{p.header.topshift}}; margin-right: {{p.header.rightshift}};" src='../LaurasLens/gallery/{{p.title}}/{{p.header.mainpic}}'></div>
+			</li>
+		{% endfor %}
 	</ul>
 	</div>
 </div>

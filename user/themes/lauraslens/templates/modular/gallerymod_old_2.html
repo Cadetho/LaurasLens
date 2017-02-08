@@ -1,0 +1,12 @@
+<div class="gallery_wrap">
+	<div class="grid">
+		<div id="column1" class="column"></div>
+		<div id="column2" class="column"></div>
+		<div id="column3" class="column"></div>
+		{% for p in page.find('/gallery').children if p != page %}
+			{% for image in p.media.images %}
+				{{image.html}}
+			{% endfor %}
+		{% endfor %}
+	</div>
+</div>
