@@ -46,8 +46,22 @@ $(document).ready(function() {
 		imgheight = $(img).height();
 		widthflag = 0;
 		heightflag = 0;
-		
-		if(imgwidth < gridwArr[1]){
+		var flag=true;
+		//3:2 or 2:3 images
+		for(var i=0;i<20;i++){
+			for(var j=0;j<20;j++){
+				if(imgheight-1 < imgwidth*i/j && imgwidth*i/j < imgheight+1){
+					widthflag = j;
+					heightflag = i;
+					console.log(imgheight + "    " + j + "    " + i);
+					flag=false;
+					break;
+				}
+				if(!flag){break;}
+			}
+		}
+
+/* 		if(imgwidth < gridwArr[1]){
 			widthflag = 1;
 			imgwidth = gridwArr[1];
 			$(this).width(gridwArr[1]);
@@ -101,7 +115,7 @@ $(document).ready(function() {
 		} else{
 			heightflag = 10;
 			$(this).height(gridwArr[10]);
-		}
+		} */
 		
 		imglinks.push({img: this, w: widthflag, h: heightflag});	
 	});
@@ -109,6 +123,7 @@ $(document).ready(function() {
 	var left =0;
 	var top = 0;
 	var len = imglinks.length;
+	console.log(imglinks);
 	$(imglinks[len-1].img).css("top", "0");
 	$(imglinks[len-1].img).css("left", "0");
 	setimgloc(0,0, imglinks[len-1].w, imglinks[len-1].h);
@@ -122,7 +137,6 @@ $(document).ready(function() {
 				$(imglinks[nextimg].img).css("left", left);
 				imglinks.splice(nextimg, 1);
 		}
-	console.log(imgloc.length);
 	$('.gallery_wrap').css("height", imgloc.length*gridwidth*0.1+"px");	
 	
 	
@@ -236,13 +250,38 @@ function getnextimg(){
 	return nextimg;
 }
 function findBestFit(width){
-		console.log(currentx + "," + currenty + "  " + width);
-	for(g=0;g<imgloc.length;g++){
-		console.log(imgloc[g]);
-	}
-	var nextimg = 0;
+	var nextimg = null;
 	var maxwidth=0;
-	for(i=imglinks.length-1;i>=0;i--){
+	var maxheight = 0;
+	for(i=0;i<imglinks.length;i++){
+		if(imglinks[i].w >= maxwidth && imglinks[i].w <=width){
+			if(imglinks[i].w == maxwidth && imglinks[i].h > maxheight){
+				nextimg = i;
+				maxwidth = imglinks[i].w;
+			} else if(imglinks[i].w > maxwidth){
+				nextimg = i;
+				maxwidth = imglinks[i].w;
+			}
+		}
+	}
+	if(nextimg==null){
+		var temparr = imgloc.slice[currenty].slice(currentx);
+		var endindex
+		nextone = temparr.indexOf(1);
+		if(nextone == -1){
+			endindex=imglinks[currenty].length;
+		} else {
+			endindex = currentx + nextone;
+		}
+		
+		for(q=currentx;q<endindex;q++){
+			imageloc[currenty][q]=1;
+		}
+		currenty++;
+		width=findnextimgwidth();
+		nextimg = findBestFit(width);
+	}
+/* 	for(i=imglinks.length-1;i>=0;i--){
 		if(imglinks[i].w>width){
 			nextimg=i;
 			maxwidth=width;
@@ -273,7 +312,7 @@ function findBestFit(width){
 				nextimg = findBestFit(width);
 			}
 		}
-	}
+	} */
 	return nextimg;
 }
 
