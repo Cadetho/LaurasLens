@@ -1,5 +1,6 @@
 ---
-title: 'gallery-main'
+title: 'Gallery'
+mainpic: 'main.jpg'
 content:
     items: @self.children
 ---

@@ -1,4 +1,4 @@
 ---
-title: 'gallery-item-1'
+title: 'People'
 mainpic: 'main.jpeg'
 ---

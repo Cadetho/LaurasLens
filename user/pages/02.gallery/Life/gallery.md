@@ -1,5 +1,5 @@
 ---
-title: 'gallery-item-4'
+title: 'Life'
 mainpic: main.jpeg
 topshift: '-40%'
 ---

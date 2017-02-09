@@ -1,4 +1,5 @@
 ---
-title: 'gallery-item-3'
+title: 'Places'
 mainpic: 'main.jpeg'
+
 ---

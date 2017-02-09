@@ -49,7 +49,7 @@ h2.slider-text{
 	height: 100vh;
 	position: relative;
 	font-family: 'Merriweather', serif;
-	background-image: url("../img/cork-wallet.png");
+
 	background-repeat: repeat;
 }
 
@@ -240,49 +240,9 @@ div.gallery_wrap{
 	position: relative;
 }
 
-.gallery_item{
-	width: 45%;
-	height: 20vw;
-	margin-bottom: 5vh;
-	margin-right: 5%;
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-}
-.gallery_item:after{
-	content: '';
-	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: absolute;
-	background: grey;
-	  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-	opacity: 0;
-}
 
-.gallery_item:hover:after{
-	opacity: 0.35;
-}
 
-.gallery_item > img{
-	width: 100%;
-	height: auto;
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	  filter: none;
-}
-.gallery_item:hover > img{
-	  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  filter: blur(2px);
-}
+
 .slider-wrap{
 	position: absolute;
 	height: 80%;
@@ -297,27 +257,35 @@ div.gallery_wrap{
 
 
 div.gallery-tile{
-	width: 20vw;
+	width: 17vw;
 	overflow: hidden;
 	height: 100%;
+	display: inline-block;
 
+}
+
+div.gallery-tile > a{
+	height: 100%;
 }
 .category-image{
 	height: 75%;
+	overflow: hidden;
 }
 .category-image > img{
 	height: 100%;
 	width: auto;
+		-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	  filter: none;
 }
-.slider{
-	height: 100%;
+.category-image:hover > img{
+	-moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.slick-list{
-	height: 100%;
+.category-info{
+	padding-top: 5%;
+	padding-left: 5%;
 }
-.slick-track{
-	height: 100%;
-}
-.gallery-tile{
-	height: 100%;
-}
+

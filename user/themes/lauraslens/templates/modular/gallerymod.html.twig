@@ -1,18 +1,29 @@
 <div class="gallery_wrap">
 	<div class="slider-wrap">
 		<h1>Categories</h1>
-		<div class="slider">
+		{% set p = page.find('/gallery') %}
+			<div class="gallery-tile">
+				<a href="{{p.url}}">
+					<div class="category-image">
+						<img src="{{ base_url }}/gallery/{{p.header.mainpic}}">
+					</div> 
+				</a>
+				<div class="category-info">
+					<h2>All</h2>
+				</div>
+			</div>
 		{% for p in page.find('/gallery').children if p != page %}
 			<div class="gallery-tile">
-				<div class="category-image">
-					<img src="../LaurasLens/gallery/{{p.title}}/{{p.header.mainpic}}">
-				</div>
+				<a href="{{p.url}}">
+					<div class="category-image">
+						<img src="{{ base_url }}/gallery/{{p.title}}/{{p.header.mainpic}}">
+					</div>
+				</a>
 				<div class="category-info">
-				<h2>{{p.header.categoryName}}</h2>
-				<h3>{{p.header.Date}}</h3>
+					<h2>{{p.title}}</h2>
 				</div>
 			</div>
 		{% endfor %}
-		</div>
+
 	</div>
 </div>
