@@ -1,6 +1,8 @@
 ---
-title: 'Gallery'
-mainpic: 'main.jpg'
+title: Gallery
+slug: gallery
+mainpic: main.jpg
 content:
-    items: @self.children
+    items: '@self.children'
 ---
+

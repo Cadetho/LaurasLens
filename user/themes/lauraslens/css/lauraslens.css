@@ -49,8 +49,9 @@ h2.slider-text{
 	height: 100vh;
 	position: relative;
 	font-family: 'Merriweather', serif;
-
-	background-repeat: repeat;
+	
+	
+	background-color: #f4f5f7;
 }
 
 .aboutimg{
@@ -238,6 +239,7 @@ div.gallery_wrap{
 	height: 100vh;
 	width: 100%;
 	position: relative;
+	background-color: #f4f5f7;
 }
 
 
@@ -274,31 +276,46 @@ div.gallery-tile > a{
 	transition: all 0.3s;
 	height: 75%;
 	overflow: hidden;
-	padding-bottom: 5%;
+	margin-bottom: 15%;
 }
 .category-image:hover {
-	height: 78%;
-	padding-bottom: 2%;
+	overflow: visible;
 }
-.category-image > img{
+
+.category-image-inner{
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.category-image-inner:hover{
+	transition: all 0.3s;
+	height: 110%;
+}
+.category-image > div > img{
 	height: 100%;
 	width: auto;
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
-.category-image:hover > img{
-	-moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+.category-image:hover > div > img{
+	-moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 .category-info{
-
 	padding-top: 5%;
 	padding-left: 5%;
 }
 
 div.category-info > h2{
+
 	position: relative;
 	text-decoration: none;
 	display: inline-block;

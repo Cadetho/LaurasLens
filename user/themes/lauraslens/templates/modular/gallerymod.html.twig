@@ -5,7 +5,9 @@
 			<div class="gallery-tile">
 				<a href="{{p.url}}">
 					<div class="category-image">
-						<img src="{{ base_url }}/gallery/{{p.header.mainpic}}">
+					<div class="category-image-inner">
+						<img src="{{ base_url }}/{{p.slug}}/{{p.header.mainpic}}">
+						</div>
 					</div> 
 				</a>
 				<div class="category-info">
@@ -16,7 +18,9 @@
 			<div class="gallery-tile">
 				<a href="{{p.url}}">
 					<div class="category-image">
+						<div class="category-image-inner">
 						<img src="{{ base_url }}/gallery/{{p.title}}/{{p.header.mainpic}}">
+						</div>
 					</div>
 				</a>
 				<div class="category-info">
