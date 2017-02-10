@@ -1,0 +1,32 @@
+{% if page.header.menutoggle %}
+<nav class="navbar {% if page.header.navbar_class %}{{ page.header.navbar_class }}{% else %}navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top{% endif %}">
+    <div class="container">
+        <a class="navbar-brand" href="{% if not site.logo.url %}{{ base_url_absolute }}{% else %}{{ site.logo.url }}{% endif %}">
+            {% if site.logo.icon %}<span class="icon-{{ site.logo.icon }}"></span>{% endif %}
+            {% if site.logo.text %}<span class="sr-only">{{ site.logo.text }}</span>{% endif %}
+        </a>
+        <a class="navbar-toggler hidden-md-up pull-right" data-toggle="collapse" href="#collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
+            &#9776;
+        </a>
+        <a class="navbar-toggler navbar-toggler-custom hidden-md-up pull-right" data-toggle="collapse" href="#collapsingMobileUser" aria-expanded="false" aria-controls="collapsingMobileUser">
+            <span class="icon-user"></span>
+        </a>
+        <div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
+            <ul class="nav navbar-nav pull-right">
+                
+                <li class="nav-item nav-item-toggable">
+                    <a class="nav-link" href="{{ base_url }}/home/modular.md">
+                        Home<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+				 <li class="nav-item nav-item-toggable">
+                    <a class="nav-link" href="{{ base_url }}/gallery/gallery.md">
+                        Gallery<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+			</ul>
+		</div>
+                
+    </div>
+</nav>
+{% endif %}

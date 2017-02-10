@@ -58,6 +58,7 @@ form:
 
 
 onpage_menu: true
+menutoggle: false
 content:
     items: @self.modular
     order:
